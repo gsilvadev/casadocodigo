@@ -48,6 +48,7 @@
 			</exclusions>
 		</dependency>
 
+		<!-- Logs -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
@@ -72,6 +73,7 @@
 			<scope>runtime</scope>
 		</dependency>
 
+		<!-- Persistência -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
@@ -97,6 +99,19 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.15</version>
 		</dependency>
+
+		<!-- Biblioteca de Validação -->
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>1.0.0.GA</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>4.2.0.Final</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
