@@ -28,8 +28,8 @@ public class CarrinhoItem {
 		this.tipoPreco = tipoPreco;
 	}
 	
-	public BigDecimal getPreco(TipoPreco tipoPreco){
-		return produto.getPrecos().stream().filter(tipo -> tipo.equals(tipoPreco)).findFirst().get().getValor();
+	public BigDecimal getPreco(){
+		return produto.precoPara(this.tipoPreco);
 	}
 
 	@Override

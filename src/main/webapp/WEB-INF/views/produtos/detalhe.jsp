@@ -98,12 +98,13 @@
 
 		<section class="buy-options clearfix">
 			<form action='<c:url value="/carrinho/add" />' method="post" class="container">
+				<input type="hidden" name="produtoId" value="${produto.id}" />
 				<ul id="variants" class="clearfix">
-					<input type="hidden" name="produtoId" value="${produto.id}" />
 					<c:forEach items="${produto.precos }" var="preco">
-						<li class="buy-option"><input type="radio" name="id"
-							class="variant-radio" id="product-variant-9720393823"
-							value="9720393823" checked="checked" /> <label
+						<li class="buy-option">
+							<input type="radio" name="tipo"
+							class="variant-radio" id="tipo"
+							value="${preco.tipo }" checked="checked" /> <label
 							class="variant-label" for="product-variant-9720393823">
 								${preco.tipo } </label> <small class="compare-at-price">R$
 								39,90</small>
@@ -111,7 +112,7 @@
 					</c:forEach>
 				</ul>
 				<button type="submit" class="submit-image icon-basket-alt"
-					alt="Compre Agora" title="Compre Agora"></button>
+					title="Compre Agora"></button>
 
 			</form>
 
